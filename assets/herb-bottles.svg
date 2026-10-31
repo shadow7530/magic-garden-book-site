@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 290" fill="none">
+  <g stroke-linecap="round" stroke-linejoin="round">
+    <path d="M45 249c45-12 91-9 127-4 38 5 73 0 106-13" stroke="#9da789" stroke-width="2" stroke-dasharray="3 7"/>
+    <path d="M89 236V127c0-10 8-18 18-18h24c10 0 18 8 18 18v109" fill="#e3d7bb" stroke="#8e9a79" stroke-width="2"/>
+    <path d="M101 109V86h36v23" fill="#f4e7d0" stroke="#8e9a79" stroke-width="2"/><path d="M98 85h42v-8H98z" fill="#a77c5a" stroke="#8e6a4d" stroke-width="2"/>
+    <path d="M95 153c18-9 37-9 48 0v62H95z" fill="#b6c8a0" opacity=".8"/><path d="M116 204v-31m0 17c-9 0-14-6-14-13 8 0 12 4 14 13m0-8c1-9 7-13 15-12 0 8-6 12-15 12Z" stroke="#637d59" stroke-width="2"/>
+    <path d="M174 240V152c0-8 7-15 15-15h24c8 0 15 7 15 15v88" fill="#f0d7cd" stroke="#ad7c75" stroke-width="2"/><path d="M184 137v-25h34v25" fill="#f7e5d7" stroke="#ad7c75" stroke-width="2"/><path d="M181 111h40v-8h-40z" fill="#ae7770" stroke="#8c625c" stroke-width="2"/>
+    <path d="M180 175c15-8 30-6 42 0v47h-42z" fill="#d99a9a" opacity=".55"/><path d="M197 211v-21m0 9c-7 0-10-5-10-10 6 0 9 3 10 10m0-6c1-6 5-9 11-8 0 5-4 8-11 8Z" stroke="#8d655e" stroke-width="1.7"/>
+    <path d="M38 234c-7-27-2-45 12-57 3 19 0 33-12 57Zm0 0c15-23 30-29 43-27-8 18-21 27-43 27Zm-8-44c-8-16-6-28 3-37 5 14 3 25-3 37Zm0 0c14-11 26-12 37-5-9 10-21 12-37 5Z" fill="#b2bd9a" stroke="#758768" stroke-width="1.6"/>
+    <path d="M249 233c-2-23 5-39 20-47 1 17-5 33-20 47Zm0 0c15-18 31-21 44-12-11 13-25 17-44 12Zm4-55c-4-14 0-25 10-32 3 14-1 24-10 32Zm0 0c13-8 24-7 33 2-9 8-20 8-33-2Z" fill="#c1caa9" stroke="#758768" stroke-width="1.6"/>
+    <path d="M35 249h245" stroke="#c4ae8b" stroke-width="2"/><path d="M103 255h115l-5 24H108z" fill="#e8d7b6" stroke="#b8a17a" stroke-width="1.5"/><path d="M118 264h83" stroke="#b7a17f" stroke-width="1.5"/><text x="160" y="273" fill="#806d53" font-family="Georgia,serif" font-size="10" text-anchor="middle" letter-spacing="2">HERB NOTES</text>
+    <path d="m63 71 3 7 7 1-5 5 1 7-6-4-6 3 2-6-4-5 7 1 1-9ZM254 62l2 5 5 1-4 3 1 5-4-3-4 2 1-5-3-4 5 1 1-5Z" fill="#c0a366" stroke="#c0a366" stroke-width="1"/>
+    <path d="M161 43c-4 8-11 9-11 17a11 11 0 0 0 22 0c0-8-7-9-11-17Z" fill="#e4b0ac" stroke="#bd8584" stroke-width="1.6"/><path d="M161 77V63m0 10c-7-1-10-5-10-10 6 0 9 3 10 10m0-5c1-7 5-10 11-9 0 6-4 9-11 9Z" stroke="#768a66" stroke-width="1.6"/>
+  </g>
+</svg>
