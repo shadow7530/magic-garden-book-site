@@ -5,13 +5,14 @@
 ## เปิดใช้งาน
 1. แตกไฟล์ ZIP
 2. เปิดโฟลเดอร์ `magic-garden-book-site` ใน VS Code
-3. เปิด `index.html` โดยตรง หรือใช้ส่วนขยาย Live Server เพื่อทดลองบนเบราว์เซอร์
+3. เปิด `index.html` โดยตรง หรือใช้ส่วนขยาย Live Server เพื่อทดลองบนเบราว์เซอร์ (แนะนำ Live Server หากต้องการทดสอบเหมือนเว็บไซต์จริง)
 
 ## โครงสร้างไฟล์
 - `index.html` — Header, Hero, เรื่องย่อ, กลุ่มผู้อ่าน, พื้นฐานการอ่าน, ข้อคิด, รายละเอียดหนังสือ, ปุ่มสั่งซื้อ และ SEO/AEO
 - `css/style.css` — โทนสี รูปแบบกระดาษ ภาพตกแต่ง การจัดวาง Responsive และ animation
-- `js/script.js` — เมนูมือถือ เอฟเฟกต์ปุ่ม Scroll reveal และเมนู active ตาม section
+- `js/script.js` — เมนูมือถือ เอฟเฟกต์ปุ่ม Scroll reveal พร้อมระบบสำรองเมื่อ AOS CDN โหลดไม่ได้ และเมนู active ตาม section
 - `images/book-cover.jpg` — ภาพปกหนังสือที่ผู้ใช้ส่งมา ตัดเฉพาะขอบว่างด้านข้าง
+- `images/motion/jarrett-hero.webp` — ภาพจาเรตต์ถือช่อดอกไม้ที่ปรับขนาดสำหรับใช้ใน Hero
 - `assets/vine-corner.svg` — เถาวัลย์มุมหน้าเว็บ
 - `assets/pressed-flower.svg` — ดอกไม้แห้งตกแต่ง
 - `assets/sealed-letter.svg` — จดหมายปิดผนึกแบบวาดมือ
@@ -31,6 +32,51 @@ Bootstrap และ Google Fonts โหลดจาก CDN จึงต้อง
 
 ## JavaScript feature for the assignment
 
-This version selects **Animate On Scroll (AOS)** as the one assessed feature from the three allowed options. AOS is loaded from its CDN and initialized in `js/script.js`. Major sections use `data-aos` attributes with gentle, one-time reveal animations. If AOS fails to load or the visitor requests reduced motion, the content remains visible.
+This version selects **Animate On Scroll (AOS)** as the one assessed feature from the three allowed options. AOS is loaded from its CDN and initialized in `js/script.js`. Major sections and the supplied Jarrett character use `data-aos` attributes with gentle, one-time reveal animations. The character also has a subtle floating animation, disabled for reduced-motion preferences. If AOS fails to load or the visitor requests reduced motion, the content remains visible.
 
 The page keeps the supplied book cover, the Nanmeebooks purchase URL, responsive breakpoints, SEO metadata, and the four AEO answers.
+
+
+## Enchanted Garden Animation update
+
+This build keeps **AOS (Animate On Scroll)** as the primary animation library for the assignment and adds lightweight CSS/JavaScript motion using the uploaded image assets:
+
+- Gentle parallax movement on two separate watercolor garden panoramas (one in the Hero, one in the purchase section). These are distinct images, not a matched three-layer scene.
+- Butterfly gliding and subtle flutter motion.
+- Falling petals, drifting leaves, floating flowers and twinkling golden sparkles generated from the transparent PNG artwork.
+- A slow floating effect on Jarrett's reading illustration.
+- Paper/card hover lift on mouse-capable devices.
+- Staggered AOS reveals for cards and reader traits.
+
+The animation system respects `prefers-reduced-motion`. When reduced motion is requested, decorative particles and parallax are not initialized and AOS data attributes are removed so all content remains visible.
+
+New optimized assets are stored in `images/motion/` as transparent WebP files to reduce file size while retaining alpha transparency.
+
+
+## Animation and artwork package (current build)
+
+The latest build retains AOS as its primary scroll-animation library and supplements it with lightweight CSS/JavaScript effects:
+
+- Scroll parallax on the greenhouse panorama in the Hero and the garden-path panorama in the purchase section. These are two separate artworks, not a matched three-layer parallax scene.
+- Gentle butterfly gliding/flutter, drifting petals and leaves, floating blossoms, and twinkling stars.
+- A slow floating effect for Jarrett's reading illustration.
+- Staggered AOS reveals for reader-trait notes, takeaways cards, and book details.
+- Paper/card hover lift on pointer devices, matching watercolor icons beside section headings, and a center-out reveal of the single gate illustration. The gate reveal is not a physically swinging two-panel animation because the supplied gate is one complete image.
+- `prefers-reduced-motion` support: ambient motion is disabled and all content stays visible.
+
+Optimized, transparent WebP assets used by the website are stored in `images/motion/`. The additional supplied artwork is retained in compressed form in `images/source-artwork/` for possible future use. The original book cover remains unchanged in `images/book-cover.jpg`.
+
+
+## Visual refinements from the latest review
+
+- The garden gate image now uses `height: auto` and `object-fit: contain` so its natural aspect ratio is preserved instead of stretching vertically.
+- The reader recommendation section has a narrower column gap and a slightly larger, better-aligned herb illustration, bringing it closer to the explanatory text.
+- The Hero invitation line “ค่อย ๆ เปิดหน้ากระดาษ แล้วออกเดินทางไปด้วยกัน” uses a darker sage-ink color, stronger font weight, and slightly larger type for better contrast on the cream background.
+
+
+## Troubleshooting: animations on a new computer
+
+- The page now includes local scroll-reveal CSS/JavaScript as a fallback. If the AOS CDN is unavailable, the scroll reveals, floating artwork, butterflies, petals, leaves and sparkles can still run from the files in this folder.
+- A small **“หยุดแอนิเมชัน / เปิดแอนิเมชัน”** control appears at the bottom-right. This is useful if the computer has **Reduce motion / ลดภาพเคลื่อนไหว** enabled in accessibility settings. The page respects that setting by default, but you can explicitly turn animation on with this control.
+- Keep the entire extracted folder together. Do not move `index.html` away from the `css`, `js`, `assets`, and `images` folders.
+- Bootstrap and Google Fonts still use their CDNs, so an internet connection gives the most complete visual layout and typography. The animation fallback itself is local.

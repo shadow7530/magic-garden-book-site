@@ -15,7 +15,6 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500;600;700&family=Mali:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
   <script type="application/ld+json">
   {
@@ -33,6 +32,9 @@
 </head>
 <body>
   <a class="skip-link" href="#main-content">ข้ามไปยังเนื้อหาหลัก</a>
+  <button class="motion-toggle" id="motionToggle" type="button" aria-pressed="false" hidden>
+    <span class="motion-toggle-star" aria-hidden="true">✧</span><span data-motion-label>เปิดแอนิเมชัน</span>
+  </button>
 
   <header class="site-header">
     <nav class="navbar navbar-expand-lg site-nav" aria-label="เมนูหลัก">
@@ -69,25 +71,33 @@
     <!-- HERO / SECTION 1 -->
     <section class="hero-section" id="home" aria-labelledby="hero-title">
       <div class="hero-paper-texture" aria-hidden="true"></div>
+      <div class="garden-parallax-scene hero-garden-scene" data-parallax-scene data-parallax-strength="18" aria-hidden="true"><img src="images/motion/garden-panorama.webp" alt="" width="1900" height="660" fetchpriority="high"></div>
+      <div class="ambient-particles" data-particles="hero" aria-hidden="true"></div>
       <img class="decor decor-vine decor-vine-left" src="assets/vine-corner.svg" alt="" aria-hidden="true">
       <img class="decor decor-vine decor-vine-right" src="assets/vine-corner.svg" alt="" aria-hidden="true">
       <img class="decor decor-flower decor-flower-one" src="assets/pressed-flower.svg" alt="" aria-hidden="true">
       <img class="decor decor-flower decor-flower-two" src="assets/pressed-flower.svg" alt="" aria-hidden="true">
-      <img class="decor decor-butterfly" src="assets/butterfly.svg" alt="" aria-hidden="true">
+      <img class="decor decor-butterfly magic-butterfly-flight magic-butterfly-flight--hero" src="images/motion/butterfly.webp" alt="" aria-hidden="true" width="320" height="290">
       <span class="tiny-star star-one" aria-hidden="true">✦</span><span class="tiny-star star-two" aria-hidden="true">✧</span><span class="tiny-star star-three" aria-hidden="true">✦</span>
 
       <div class="container hero-container">
         <div class="row align-items-center g-5">
-          <div class="col-lg-5 book-visual-column">
-            <div class="book-stage" id="cover-display" data-aos="fade-right" data-aos-duration="900">
-              <span class="paper-label label-top">บันทึกเล่มที่ ๑</span><span class="book-shadow" aria-hidden="true"></span>
-              <div class="book-cover-wrap"><img class="book-cover" src="images/book-cover.jpg" alt="ปกหนังสือมหัศจรรย์สวนเวทมนตร์ เล่ม 1 สูตรพิศวงของแม่มดสมุนไพร แสดงภาพเด็กหญิงและเหล่าแมวท่ามกลางดอกไม้" width="699" height="1024" fetchpriority="high"></div>
-              <div class="pressed-flower flower-sticker" aria-hidden="true"><img src="assets/pressed-flower.svg" alt=""></div>
-              <div class="round-stamp" aria-label="นิยายแฟนตาซีเยาวชน"><span>HERB</span><span class="stamp-leaf" aria-hidden="true">✿</span><span>MAGIC</span></div>
-              <div class="book-caption"><span class="caption-line"></span> หนังสือหนึ่งเล่ม · สวนอีกหนึ่งโลก <span class="caption-line"></span></div>
+          <div class="col-lg-6 book-visual-column">
+            <div class="hero-art-row">
+              <div class="hero-character-wrap" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="140">
+                <img class="hero-character" src="images/motion/jarrett-hero.webp" alt="ภาพวาดจาเรตต์ เด็กหญิงผมยาวสีน้ำตาลในชุดสีชมพูถือช่อดอกไม้" width="1024" height="1536" fetchpriority="high">
+                <span class="character-note"><span aria-hidden="true">✿</span> จาเรตต์ · ผู้ค้นพบสวนลับ</span>
+              </div>
+              <div class="book-stage" id="cover-display" data-aos="fade-right" data-aos-duration="900">
+                <span class="paper-label label-top">บันทึกเล่มที่ ๑</span><span class="book-shadow" aria-hidden="true"></span>
+                <div class="book-cover-wrap"><img class="book-cover" src="images/book-cover.jpg" alt="ปกหนังสือมหัศจรรย์สวนเวทมนตร์ เล่ม 1 สูตรพิศวงของแม่มดสมุนไพร แสดงภาพเด็กหญิงและเหล่าแมวท่ามกลางดอกไม้" width="699" height="1024" fetchpriority="high"></div>
+                <div class="pressed-flower flower-sticker" aria-hidden="true"><img src="assets/pressed-flower.svg" alt=""></div>
+                <div class="round-stamp" aria-label="นิยายแฟนตาซีเยาวชน"><span>HERB</span><span class="stamp-leaf" aria-hidden="true">✿</span><span>MAGIC</span></div>
+                <div class="book-caption"><span class="caption-line"></span> หนังสือหนึ่งเล่ม · สวนอีกหนึ่งโลก <span class="caption-line"></span></div>
+              </div>
             </div>
           </div>
-          <div class="col-lg-7 hero-copy-column">
+          <div class="col-lg-6 hero-copy-column">
             <div class="hero-copy" data-aos="fade-left" data-aos-duration="900">
               <p class="eyebrow"><span class="eyebrow-flower" aria-hidden="true">✿</span> A LITTLE JOURNEY INTO A MAGIC GARDEN</p>
               <h1 id="hero-title">มหัศจรรย์<br class="desktop-break">สวนเวทมนตร์</h1>
@@ -106,12 +116,14 @@
 
     <!-- STORY / SECTION 2 -->
     <section class="story-section section-pad" id="story" aria-labelledby="story-title">
+      <div class="ambient-particles" data-particles="story" aria-hidden="true"></div>
+      <img class="magic-butterfly-flight magic-butterfly-flight--story" src="images/motion/butterfly-accent.webp" alt="" aria-hidden="true" width="260" height="220" loading="lazy">
       <div class="container content-container">
         <div class="section-kicker"><span>CHAPTER 01</span><i aria-hidden="true">✿</i><span>THE LETTER</span></div>
         <div class="story-paper reveal-item" data-aos="fade-up" data-aos-duration="850">
           <img class="washi-tape tape-story" src="assets/washi-tape.svg" alt="" aria-hidden="true">
           <img class="story-sprig" src="assets/pressed-flower.svg" alt="" aria-hidden="true">
-          <div class="letter-art" aria-hidden="true"><img src="assets/sealed-letter.svg" alt=""></div>
+          <div class="letter-art letter-art--watercolor" aria-hidden="true" data-aos="zoom-in" data-aos-duration="900"><img src="images/motion/envelope.webp" alt="" width="440" height="340" loading="lazy"></div>
           <div class="story-copy">
             <p class="handwritten-label">จดหมายฉบับหนึ่งที่เปลี่ยนทุกอย่าง</p>
             <h2 id="story-title">มารู้จักเรื่องราวในเล่มนี้</h2>
@@ -129,19 +141,20 @@
 
     <!-- AUDIENCE / AEO: WHO -->
     <section class="readers-section section-pad" id="readers" aria-labelledby="readers-title">
+      <div class="ambient-particles" data-particles="readers" aria-hidden="true"></div>
       <img class="section-decor section-decor-left readers-flower" src="assets/botanical-corner.svg" alt="" aria-hidden="true" loading="lazy">
       <img class="section-decor section-decor-right readers-butterfly" src="assets/butterfly.svg" alt="" aria-hidden="true" loading="lazy">
       <div class="container content-container">
-        <div class="section-heading text-center reveal-item" data-aos="fade-up"><div class="section-kicker justify-content-center"><span>CHAPTER 02</span><i aria-hidden="true">❧</i><span>WHO MAY LOVE IT?</span></div><h2 id="readers-title">ใครน่าจะหลงรักหนังสือเล่มนี้</h2><p>ลองดูว่าคุณเป็นนักอ่านแบบไหนในสวนเวทมนตร์แห่งนี้</p></div>
+        <div class="section-heading text-center reveal-item" data-aos="fade-up"><div class="section-kicker justify-content-center"><span>CHAPTER 02</span><i aria-hidden="true">❧</i><span>WHO MAY LOVE IT?</span></div><div class="heading-with-art"><img class="heading-art-icon" src="images/motion/icon-reader.webp" alt="" aria-hidden="true" width="150" height="150" loading="lazy"><h2 id="readers-title">ใครน่าจะหลงรักหนังสือเล่มนี้</h2></div><p>ลองดูว่าคุณเป็นนักอ่านแบบไหนในสวนเวทมนตร์แห่งนี้</p></div>
         <div class="reader-layout">
-          <div class="herb-stack reveal-item" data-aos="zoom-in" data-aos-duration="850"><img src="assets/herb-bottles.svg" alt="ภาพวาดขวดแก้ว สมุนไพร และหนังสือบันทึกพฤกษศาสตร์ ตกแต่งด้วยเส้นวาดมือ" loading="lazy"><p class="handwritten-label">ของสะสมจากสวนลับ</p></div>
+          <div class="herb-stack reveal-item" data-aos="zoom-in" data-aos-duration="850"><img class="reader-potion-art" src="images/motion/apothecary-bottle.webp" alt="ขวดแก้วสมุนไพรสีน้ำสำหรับตกแต่งสวนเวทมนตร์" width="280" height="420" loading="lazy"><img class="reader-flower-art" src="images/motion/wildflower.webp" alt="" aria-hidden="true" width="180" height="220" loading="lazy"><p class="handwritten-label">ของสะสมจากสวนลับ</p></div>
           <div class="reader-copy reveal-item" data-aos="fade-up" data-aos-delay="100">
             <h3>หนังสือเล่มนี้เหมาะกับใคร?</h3>
             <p>เหมาะกับเด็กวัยประมาณ 7–12 ปี และผู้อ่านที่ชอบเรื่องราวแฟนตาซีโทนอ่อนโยน โดยเฉพาะคนที่สนใจสวนลึกลับ ดอกไม้ สมุนไพร สัตว์น่ารัก และตัวละครที่ค่อย ๆ เรียนรู้ระหว่างการผจญภัย</p>
             <div class="reader-traits">
-              <div class="trait-note"><span class="trait-icon" aria-hidden="true">✿</span><span><b>นักสำรวจตัวน้อย</b><small>ชอบค้นหาความลับในสถานที่ใหม่ ๆ</small></span></div>
-              <div class="trait-note"><span class="trait-icon" aria-hidden="true">❀</span><span><b>คนรักธรรมชาติ</b><small>สนใจพืช ดอกไม้ และสมุนไพร</small></span></div>
-              <div class="trait-note"><span class="trait-icon" aria-hidden="true">✧</span><span><b>นักอ่านสายอบอุ่น</b><small>ชอบแฟนตาซีที่ไม่เน้นความรุนแรง</small></span></div>
+              <div class="trait-note" data-aos="fade-up" data-aos-delay="80"><span class="trait-icon" aria-hidden="true">✿</span><span><b>นักสำรวจตัวน้อย</b><small>ชอบค้นหาความลับในสถานที่ใหม่ ๆ</small></span></div>
+              <div class="trait-note" data-aos="fade-up" data-aos-delay="180"><span class="trait-icon" aria-hidden="true">❀</span><span><b>คนรักธรรมชาติ</b><small>สนใจพืช ดอกไม้ และสมุนไพร</small></span></div>
+              <div class="trait-note" data-aos="fade-up" data-aos-delay="280"><span class="trait-icon" aria-hidden="true">✧</span><span><b>นักอ่านสายอบอุ่น</b><small>ชอบแฟนตาซีที่ไม่เน้นความรุนแรง</small></span></div>
             </div>
             <p class="small-caveat">อายุที่แนะนำเป็นแนวทางเบื้องต้น ความชอบและความคล่องในการอ่านของแต่ละคนอาจแตกต่างกัน</p>
           </div>
@@ -151,13 +164,14 @@
 
     <!-- READING BASICS / AEO: PREREQUISITES -->
     <section class="basics-section section-pad" id="reading-basics" aria-labelledby="basics-title">
+      <div class="ambient-particles" data-particles="basics" aria-hidden="true"></div>
       <img class="section-decor section-decor-left basics-sprig" src="assets/botanical-corner.svg" alt="" aria-hidden="true" loading="lazy">
       <div class="container content-container">
         <div class="basics-sheet reveal-item" data-aos="fade-up" data-aos-duration="900">
-          <div class="basics-art"><img src="assets/open-herb-book.svg" alt="ภาพวาดสมุดสมุนไพรเปิดอยู่ข้างขวดแก้วและดอกไม้" loading="lazy"></div>
+          <div class="basics-art" data-aos="fade-right" data-aos-duration="950"><img class="basics-jarrett-art" src="images/motion/jarrett-reading.webp" alt="จาเรตต์ในชุดสีชมพูถือหนังสือสมุนไพรสองเล่ม" width="620" height="1100" loading="lazy"></div>
           <div class="basics-copy">
             <div class="section-kicker"><span>CHAPTER 03</span><i aria-hidden="true">✧</i><span>BEFORE YOU READ</span></div>
-            <h2 id="basics-title">เปิดอ่านได้เลยไหมนะ?</h2>
+            <div class="heading-with-art heading-with-art--start"><img class="heading-art-icon" src="images/motion/icon-open-book.webp" alt="" aria-hidden="true" width="150" height="150" loading="lazy"><h2 id="basics-title">เปิดอ่านได้เลยไหมนะ?</h2></div>
             <h3>ต้องมีพื้นฐานก่อนอ่านหรือไม่?</h3>
             <p class="question-detail">จำเป็นต้องรู้เรื่องสมุนไพรหรือเวทมนตร์มาก่อนหรือเปล่า?</p>
             <p><strong>ไม่จำเป็นต้องมีพื้นฐานเฉพาะมาก่อน</strong> ผู้อ่านสามารถเริ่มทำความรู้จักโลกของเรื่องผ่านจาเรตต์และภารกิจที่เธอต้องเผชิญได้เลย ความรู้เกี่ยวกับสมุนไพรไม่ใช่เงื่อนไขในการติดตามเนื้อเรื่อง</p>
@@ -170,18 +184,24 @@
 
     <!-- TAKEAWAYS / AEO: BENEFITS -->
     <section class="takeaways-section section-pad" id="takeaways" aria-labelledby="takeaways-title">
+      <div class="ambient-particles" data-particles="takeaways" aria-hidden="true"></div>
+      <img class="magic-butterfly-flight magic-butterfly-flight--takeaways" src="images/motion/butterfly.webp" alt="" aria-hidden="true" width="320" height="290" loading="lazy">
       <img class="section-decor section-decor-left takeaways-sprig" src="assets/botanical-corner.svg" alt="" aria-hidden="true" loading="lazy">
       <img class="section-decor section-decor-right takeaways-butterfly" src="assets/butterfly.svg" alt="" aria-hidden="true" loading="lazy">
       <div class="container content-container">
-        <div class="section-heading text-center reveal-item" data-aos="fade-up"><div class="section-kicker justify-content-center"><span>CHAPTER 04</span><i aria-hidden="true">✿</i><span>THE LITTLE TREASURES</span></div><h2 id="takeaways-title">เสน่ห์ที่ซ่อนอยู่ในหน้ากระดาษ</h2><p>นอกจากความมหัศจรรย์ ยังมีบางสิ่งที่ชวนให้เก็บกลับไปคิดต่อ</p><p class="answer-question answer-question-centered">แล้วอ่านเรื่องนี้อาจได้ประโยชน์อะไรบ้าง?</p></div>
+        <div class="section-heading text-center reveal-item" data-aos="fade-up"><div class="section-kicker justify-content-center"><span>CHAPTER 04</span><i aria-hidden="true">✿</i><span>THE LITTLE TREASURES</span></div><div class="heading-with-art"><img class="heading-art-icon" src="images/motion/icon-sprout.webp" alt="" aria-hidden="true" width="150" height="150" loading="lazy"><h2 id="takeaways-title">เสน่ห์ที่ซ่อนอยู่ในหน้ากระดาษ</h2></div><p>นอกจากความมหัศจรรย์ ยังมีบางสิ่งที่ชวนให้เก็บกลับไปคิดต่อ</p><p class="answer-question answer-question-centered">แล้วอ่านเรื่องนี้อาจได้ประโยชน์อะไรบ้าง?</p></div>
+        <figure class="journal-scene" data-aos="fade-up" data-aos-duration="950"><img src="images/motion/open-journal.webp" alt="สมุดบันทึกพฤกษศาสตร์เปิดแสดงภาพดอกไม้และสมุนไพรสีน้ำ" width="600" height="400" loading="lazy"></figure>
         <div class="treasure-grid">
-          <article class="treasure-card treasure-card-rose reveal-item" data-aos="fade-up" data-aos-delay="0"><span class="treasure-number">01</span><img src="assets/pressed-flower.svg" alt="" aria-hidden="true" loading="lazy"><h3>ปลุกจินตนาการ</h3><p>สวนลึกลับ คฤหาสน์ และสูตรสมุนไพรชวนให้ผู้อ่านสร้างภาพโลกแฟนตาซีขึ้นในใจ</p><span class="card-scribble" aria-hidden="true">imagine ✧</span></article>
-          <article class="treasure-card treasure-card-sage reveal-item" data-aos="fade-up" data-aos-delay="120"><span class="treasure-number">02</span><img src="assets/herb-bottles.svg" alt="" aria-hidden="true" loading="lazy"><h3>มองธรรมชาติอย่างใส่ใจ</h3><p>เรื่องราวผสานเวทมนตร์เข้ากับสมุนไพรและสิ่งมีชีวิต ชวนให้สังเกตคุณค่าของธรรมชาติรอบตัว</p><span class="card-scribble" aria-hidden="true">grow gently ❀</span></article>
-          <article class="treasure-card treasure-card-lilac reveal-item" data-aos="fade-up" data-aos-delay="240"><span class="treasure-number">03</span><img src="assets/sealed-letter.svg" alt="" aria-hidden="true" loading="lazy"><h3>เรียนรู้การดูแลและรับผิดชอบ</h3><p>ภารกิจของจาเรตต์ชวนคิดถึงการเอาใจใส่สถานที่ สิ่งมีชีวิต และความรู้สึกของผู้อื่น</p><span class="card-scribble" aria-hidden="true">with care ♡</span></article>
+          <article class="treasure-card treasure-card-rose reveal-item" data-aos="fade-up" data-aos-delay="0"><span class="treasure-number">01</span><img src="images/motion/wildflower.webp" alt="" aria-hidden="true" loading="lazy" width="180" height="220"><h3>ปลุกจินตนาการ</h3><p>สวนลึกลับ คฤหาสน์ และสูตรสมุนไพรชวนให้ผู้อ่านสร้างภาพโลกแฟนตาซีขึ้นในใจ</p><span class="card-scribble" aria-hidden="true">imagine ✧</span></article>
+          <article class="treasure-card treasure-card-sage reveal-item" data-aos="fade-up" data-aos-delay="120"><span class="treasure-number">02</span><img src="images/motion/leaf.webp" alt="" aria-hidden="true" loading="lazy" width="130" height="130"><h3>มองธรรมชาติอย่างใส่ใจ</h3><p>เรื่องราวผสานเวทมนตร์เข้ากับสมุนไพรและสิ่งมีชีวิต ชวนให้สังเกตคุณค่าของธรรมชาติรอบตัว</p><span class="card-scribble" aria-hidden="true">grow gently ❀</span></article>
+          <article class="treasure-card treasure-card-lilac reveal-item" data-aos="fade-up" data-aos-delay="240"><span class="treasure-number">03</span><img src="images/motion/open-journal.webp" alt="" aria-hidden="true" loading="lazy" width="600" height="400"><h3>เรียนรู้การดูแลและรับผิดชอบ</h3><p>ภารกิจของจาเรตต์ชวนคิดถึงการเอาใจใส่สถานที่ สิ่งมีชีวิต และความรู้สึกของผู้อื่น</p><span class="card-scribble" aria-hidden="true">with care ♡</span></article>
         </div>
         <p class="takeaway-footnote">ประเด็นเหล่านี้เป็นข้อคิดที่เรื่องราวชวนให้ตีความ ไม่ใช่ผลลัพธ์ที่รับประกันว่าจะเกิดกับผู้อ่านทุกคน</p>
       </div>
     </section>
+    <div class="botanical-transition botanical-transition--small" aria-hidden="true" data-aos="fade">
+      <img src="images/motion/vine-divider.webp" alt="" width="1500" height="297" loading="lazy">
+    </div>
 
     <!-- BOOK DETAILS -->
     <section class="details-section section-pad" id="book-details" aria-labelledby="details-title">
@@ -189,10 +209,10 @@
         <div class="details-paper reveal-item" data-aos="fade-up" data-aos-duration="850">
           <img class="washi-tape tape-details" src="assets/washi-tape.svg" alt="" aria-hidden="true" loading="lazy">
           <img class="details-vine" src="assets/vine-corner.svg" alt="" aria-hidden="true" loading="lazy">
-          <div class="details-heading"><div class="section-kicker"><span>THE BOOK CARD</span><i aria-hidden="true">✧</i><span>BOOK DETAILS</span></div><h2 id="details-title">ข้อมูลจากหน้าปกและเล่มหนังสือ</h2><p>บันทึกรายละเอียดเล่มนี้ไว้ เผื่ออยากกลับมาค้นหาอีกครั้ง</p></div>
+          <div class="details-heading"><div class="section-kicker"><span>THE BOOK CARD</span><i aria-hidden="true">✧</i><span>BOOK DETAILS</span></div><div class="heading-with-art"><img class="heading-art-icon" src="images/motion/icon-bookmark.webp" alt="" aria-hidden="true" width="150" height="150" loading="lazy"><h2 id="details-title">ข้อมูลจากหน้าปกและเล่มหนังสือ</h2></div><p>บันทึกรายละเอียดเล่มนี้ไว้ เผื่ออยากกลับมาค้นหาอีกครั้ง</p></div>
           <div class="details-content">
             <div class="mini-cover"><img src="images/book-cover.jpg" alt="ปกหนังสือมหัศจรรย์สวนเวทมนตร์ เล่ม 1 สูตรพิศวงของแม่มดสมุนไพร" loading="lazy" width="699" height="1024"></div>
-            <dl class="book-metadata">
+            <dl class="book-metadata" data-aos="fade-up" data-aos-delay="100">
               <div><dt>ชื่อหนังสือ</dt><dd>มหัศจรรย์สวนเวทมนตร์ เล่ม 1: สูตรพิศวงของแม่มดสมุนไพร</dd></div>
               <div><dt>ผู้เขียน</dt><dd>Yasuko Ambiru</dd></div>
               <div><dt>ผู้แปล</dt><dd>ณภัทริน ศรีกรวิชญ์</dd></div>
@@ -209,10 +229,12 @@
 
     <!-- PURCHASE CTA -->
     <section class="purchase-section" id="purchase" aria-labelledby="purchase-title">
+      <div class="garden-parallax-scene purchase-garden-scene" data-parallax-scene data-parallax-strength="13" aria-hidden="true"><img src="images/motion/garden-path.webp" alt="" width="1700" height="950" loading="lazy"></div>
+      <div class="ambient-particles" data-particles="purchase" aria-hidden="true"></div>
       <div class="container content-container">
         <div class="purchase-card reveal-item" data-aos="zoom-in-up" data-aos-duration="850">
-          <div class="purchase-garden" aria-hidden="true"><img src="assets/garden-gate.svg" alt="" loading="lazy"></div>
-          <div class="purchase-copy"><p class="handwritten-label">พร้อมออกเดินทางหรือยัง?</p><h2 id="purchase-title">ประตูสู่สวนเวทมนตร์รออยู่</h2><p>หากอยากรู้ว่าจาเรตต์จะผ่านภารกิจของคฤหาสน์ได้อย่างไร ลองไปดูรายละเอียดหนังสือจากสำนักพิมพ์กันต่อ</p><a class="btn-magic purchase-button" href="https://www.nanmeebooks.com/product/magic-garden-1/2402011433?utm_source=chatgpt.com" target="_blank" rel="noopener noreferrer"><span>ดูหนังสือที่ Nanmeebooks</span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12h15M13 5l7 7-7 7"/></svg></a><small>ลิงก์จะเปิดหน้าเว็บไซต์ Nanmeebooks ในแท็บใหม่</small></div>
+          <div class="purchase-garden" aria-hidden="true" data-aos="zoom-in" data-aos-duration="1100"><img class="purchase-gate-art" src="images/motion/garden-gate.webp" alt="" width="620" height="900" loading="lazy"></div>
+          <div class="purchase-copy"><p class="handwritten-label">พร้อมออกเดินทางหรือยัง?</p><h2 id="purchase-title">ประตูสู่สวนเวทมนตร์รออยู่</h2><p>หากอยากรู้ว่าจาเรตต์จะผ่านภารกิจของคฤหาสน์ได้อย่างไร ลองไปดูรายละเอียดหนังสือจากสำนักพิมพ์กันต่อ</p><a class="btn-magic purchase-button" href="https://www.nanmeebooks.com/product/magic-garden-1/2402011433?utm_source=chatgpt.com" target="_blank" rel="noopener noreferrer"><img class="button-book-bag" src="images/motion/icon-book-bag.webp" alt="" aria-hidden="true" width="150" height="150"><span>ดูหนังสือที่ Nanmeebooks</span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12h15M13 5l7 7-7 7"/></svg></a><small>ลิงก์จะเปิดหน้าเว็บไซต์ Nanmeebooks ในแท็บใหม่</small></div>
         </div>
       </div>
     </section>
@@ -224,8 +246,8 @@
     <div class="footer-credit">ข้อมูลบรรณานุกรมใช้เพื่อการแนะนำหนังสือ ภาพปกเป็นผลงานของเจ้าของลิขสิทธิ์ที่เกี่ยวข้อง</div>
   </footer>
 
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" async></script>
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js" async onload="window.dispatchEvent(new Event('aos-library-ready'))"></script>
   <script src="js/script.js"></script>
 </body>
 </html>
