@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 160" fill="none">
+  <g stroke-linecap="round" stroke-linejoin="round">
+    <path d="M56 151C57 112 61 76 71 40" stroke="#728363" stroke-width="2.3"/>
+    <path d="M59 119C38 121 27 109 27 94c18-1 29 7 32 25Z" fill="#b5c29c" stroke="#82936f" stroke-width="1.4"/>
+    <path d="M63 91C80 91 93 81 96 66c-18 0-29 8-33 25Z" fill="#d1d9b6" stroke="#82936f" stroke-width="1.4"/>
+    <path d="M68 65C50 66 42 53 45 40c14 0 23 10 23 25Z" fill="#becba6" stroke="#82936f" stroke-width="1.4"/>
+    <g transform="translate(35 44) rotate(-8)">
+      <ellipse rx="8" ry="18" cy="-10" fill="#d99da4" stroke="#b87681" stroke-width="1.2"/>
+      <ellipse rx="8" ry="18" cy="-10" fill="#e6b9b3" stroke="#b87681" stroke-width="1.2" transform="rotate(72)"/>
+      <ellipse rx="8" ry="18" cy="-10" fill="#d99da4" stroke="#b87681" stroke-width="1.2" transform="rotate(144)"/>
+      <ellipse rx="8" ry="18" cy="-10" fill="#e6b9b3" stroke="#b87681" stroke-width="1.2" transform="rotate(216)"/>
+      <ellipse rx="8" ry="18" cy="-10" fill="#d99da4" stroke="#b87681" stroke-width="1.2" transform="rotate(288)"/>
+      <circle r="6" fill="#dfc47b" stroke="#bca05f" stroke-width="1.2"/>
+    </g>
+    <g transform="translate(78 26) scale(.72) rotate(14)">
+      <ellipse rx="8" ry="18" cy="-10" fill="#d8a0a6" stroke="#b87681" stroke-width="1.2"/>
+      <ellipse rx="8" ry="18" cy="-10" fill="#ebc4b6" stroke="#b87681" stroke-width="1.2" transform="rotate(72)"/>
+      <ellipse rx="8" ry="18" cy="-10" fill="#d8a0a6" stroke="#b87681" stroke-width="1.2" transform="rotate(144)"/>
+      <ellipse rx="8" ry="18" cy="-10" fill="#ebc4b6" stroke="#b87681" stroke-width="1.2" transform="rotate(216)"/>
+      <ellipse rx="8" ry="18" cy="-10" fill="#d8a0a6" stroke="#b87681" stroke-width="1.2" transform="rotate(288)"/>
+      <circle r="6" fill="#dfc47b" stroke="#bca05f" stroke-width="1.2"/>
+    </g>
+    <path d="M52 147c7-5 11-4 16-1" stroke="#82936f" stroke-width="1.5"/>
+  </g>
+</svg>
